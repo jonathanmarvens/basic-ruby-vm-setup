@@ -51,7 +51,6 @@ if [ $flag_a = "fish" ]; then
   cd $FISH_SHELL_CONFIG_DIR_FUNCTIONS
   cp "/vagrant/templates$FISH_SHELL_CONFIG_DIR_FUNCTIONS/fish_prompt.fish" ./
   cp "/vagrant/templates$FISH_SHELL_CONFIG_DIR_FUNCTIONS/gemdir.fish" ./
-  cp "/vagrant/templates$FISH_SHELL_CONFIG_DIR_FUNCTIONS/irb.fish" ./
   cp "/vagrant/templates$FISH_SHELL_CONFIG_DIR_FUNCTIONS/rvm.fish" ./
   cd -
 
