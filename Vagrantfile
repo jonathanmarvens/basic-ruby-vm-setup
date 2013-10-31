@@ -6,7 +6,7 @@ Vagrant.configure VAGRANTFILE_API_VERSION do |configure|
   configure.vm.hostname = "devbox"
 
   configure.vm.network :private_network, {
-    ip: "10.50.180.30",
+    ip: "10.96.48.24",
   }
 
   configure.vm.provider :virtualbox do |machine|
@@ -36,7 +36,7 @@ Vagrant.configure VAGRANTFILE_API_VERSION do |configure|
     ]
   end
 
-  configure.vm.provision "shell" do |shell|
+  configure.vm.provision :shell do |shell|
     # Cause I can bro.
     parameters      = {
       default_shell: "fish",
@@ -51,7 +51,7 @@ Vagrant.configure VAGRANTFILE_API_VERSION do |configure|
     shell.upload_path = "/tmp/vagrant-prepare.sh"
   end
 
-  configure.vm.provision "shell" do |shell|
+  configure.vm.provision :shell do |shell|
     shell.path        = "vagrant/scripts/main-setup.fish"
     shell.privileged  = false
     shell.upload_path = "/tmp/vagrant-main-setup.fish"
@@ -63,6 +63,4 @@ Vagrant.configure VAGRANTFILE_API_VERSION do |configure|
   # configure.vm.synced_folder "vagrant", "/vagrant", {
   #   nfs: true,
   # }
-
-  # configure.vm.usable_port_range = 4000..8000
 end
