@@ -29,10 +29,12 @@ sudo aptitude $APTITUDE_FLAGS install portmap
 # Get the "python-software-properties" package for the "apt-add-repository" command.
 sudo aptitude $APTITUDE_FLAGS install python-software-properties
 
-# Install "fish" shell.
+# Install "mosh" and "fish" shell.
+sudo add-apt-repository -y ppa:keithw/mosh
 sudo apt-add-repository -y ppa:fish-shell/release-2
 sudo aptitude $APTITUDE_FLAGS update
 sudo aptitude $APTITUDE_FLAGS install fish
+sudo aptitude $APTITUDE_FLAGS install mosh
 
 # Get new/upgradable packages and do a "safe" upgrade.
 sudo aptitude $APTITUDE_FLAGS update
