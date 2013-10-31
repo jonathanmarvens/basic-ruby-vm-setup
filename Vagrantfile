@@ -64,5 +64,5 @@ Vagrant.configure VAGRANTFILE_API_VERSION do |configure|
   #   nfs: true,
   # }
 
-  configure.vm.usable_port_range = 4000..8000
+  # configure.vm.usable_port_range = 4000..8000
 end
