@@ -57,10 +57,6 @@ Vagrant.configure VAGRANTFILE_API_VERSION do |configure|
     shell.upload_path = "/tmp/vagrant-main-setup.fish"
   end
 
+  configure.vm.synced_folder "development", "/home/vagrant/development"
   configure.vm.synced_folder "vagrant", "/vagrant"
-
-  # TODO: Figure out why NFS doesn't work :( .
-  # configure.vm.synced_folder "vagrant", "/vagrant", {
-  #   nfs: true,
-  # }
 end
