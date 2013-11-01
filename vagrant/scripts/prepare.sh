@@ -36,10 +36,6 @@ sudo aptitude $APTITUDE_FLAGS update
 sudo aptitude $APTITUDE_FLAGS install fish
 sudo aptitude $APTITUDE_FLAGS install mosh
 
-# Get new/upgradable packages and do a "safe" upgrade.
-sudo aptitude $APTITUDE_FLAGS update
-sudo aptitude $APTITUDE_FLAGS safe-upgrade
-
 # Yep, I did all that for this ;p .
 if [ $flag_a = "fish" ]; then
   # Set up some default settings for "fish" shell.
