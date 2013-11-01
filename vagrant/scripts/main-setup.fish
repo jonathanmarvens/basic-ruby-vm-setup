@@ -10,6 +10,7 @@ set -x V_PROVISIONING_SCRIPTS_DIRECTORY /vagrant/scripts/provisioning
 # fish $V_PROVISIONING_SCRIPTS_DIRECTORY/node-js.fish # Set up Node.js.
 # fish $V_PROVISIONING_SCRIPTS_DIRECTORY/php.fish # Set up PHP.
 fish $V_PROVISIONING_SCRIPTS_DIRECTORY/ruby.fish # Set up Ruby.
+fish $V_PROVISIONING_SCRIPTS_DIRECTORY/mysql.fish # Set up MySQL.
 
 # Unset these environment variables since we no longer need them.
 set -e V_APTITUDE_FLAGS
