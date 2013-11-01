@@ -7,3 +7,6 @@ set fish_greeting
 set -x PATH $PATH .
 
 rvm use (rvm current)
+
+# Stupid hack for NOP.
+bash -c ":"

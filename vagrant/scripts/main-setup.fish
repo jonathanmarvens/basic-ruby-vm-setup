@@ -15,6 +15,7 @@ fish $V_PROVISIONING_SCRIPTS_DIRECTORY/mysql.fish # Set up MySQL.
 # Get new/upgradable packages and do a "safe" upgrade.
 sudo aptitude $V_APTITUDE_FLAGS update
 sudo aptitude $V_APTITUDE_FLAGS safe-upgrade
+sudo aptitude $V_APTITUDE_FLAGS autoclean
 
 # Unset these environment variables since we no longer need them.
 set -e V_APTITUDE_FLAGS
